@@ -5,13 +5,16 @@ public class InvertedIndex {
     private Map<String, LinkedList<Integer>> index;
 
     public InvertedIndex(){
-        documents = ;
+        documents = new LinkedList<>();
         index = new HashMap<>();
 
     }
-    //пустой конструктор, присвоить докуменам или LinkedList, какой то другой, а индексу hashmap пустые коллекции
-    public void indexDocument(String path){
-
+    //ключ - слово
+    //массив с индексами
+    //пустой конструктор, присвоить документам или LinkedList, какой то другой, а индексу hashmap пустые коллекции
+    //прочитать документ, разбить сплитом, убрать все лишнее через выражения и занести в мап
+    public void indexDocument(String path){ //количество элементов в одном документе
+        
     }
 
 }
