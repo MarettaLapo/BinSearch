@@ -3,7 +3,7 @@ import java.io.*;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        File file = new File("D:\\projects\\BinSearch\\collection\\King_Lear.txt");
+        File file = new File("C:\\Project\\AlgInter\\zad1(bin)\\collection\\King_Lear.txt");
         LinkedList list = new LinkedList<>();
         try (Scanner sc = new Scanner(file))
         {

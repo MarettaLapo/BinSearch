@@ -5,7 +5,7 @@ public class InvertedIndex {
     private Map<String, LinkedList<Integer>> index;
 
     public InvertedIndex(){
-        documents = new LinkedList<>();
+        documents = new ArrayList<>();
         index = new HashMap<>();
 
     }
