@@ -1,4 +1,5 @@
 import java.util.*;
+import java.io.*;
 
 public class InvertedIndex {
     private  List<String> documents;
@@ -14,7 +15,26 @@ public class InvertedIndex {
     //пустой конструктор, присвоить документам или LinkedList, какой то другой, а индексу hashmap пустые коллекции
     //прочитать документ, разбить сплитом, убрать все лишнее через выражения и занести в мап
     public void indexDocument(String path){ //количество элементов в одном документе
-        
+        File file = new File("C:\\Project\\AlgInter\\zad1(bin)\\collection\\King_Lear.txt");
+        documents.add(file.getName());
+        int iDoc = documents.size() - 1;
+        try (Scanner sc = new Scanner(file))
+        {
+            while (sc.hasNextLine()) {
+                String[] words = sc.nextLine().toLowerCase().split("\\W+");
+                for(String name: words){
+                    if(index.containsKey(name)){
+                        index.get(name).add(iDoc);
+                    }
+                    else{
+                        index.put(name, new LinkedList<>(new int[]));
+                    }
+                }
+            }
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }
