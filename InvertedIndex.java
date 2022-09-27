@@ -19,7 +19,7 @@ public class InvertedIndex {
         documents.add(file.getName());
         int iDoc = documents.size() - 1;
         try (Scanner sc = new Scanner(file))
-        {
+        {ы
             while (sc.hasNextLine()) {
                 String[] words = sc.nextLine().toLowerCase().split("\\W+");
                 for(String name: words){
@@ -27,7 +27,8 @@ public class InvertedIndex {
                         index.get(name).add(iDoc);
                     }
                     else{
-                        index.put(name, new LinkedList<>(new int[]));
+                        LinkedList list = new LinkedList<>(new int[]);
+                        index.put(name, list);
                     }
                 }
             }
